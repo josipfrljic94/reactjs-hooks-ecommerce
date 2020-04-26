@@ -1,0 +1,199 @@
+@import "./index.scss";
+
+
+$secondary:#1f95aa;
+
+.home{
+color: $secondary;
+}
+
+
+@mixin navBar {
+    background: #ffffff77;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    width: 100%;
+}
+.bg-navbar{
+    @include navBar()
+}
+.bg-navbar2{
+    @include navBar();
+background: #ffffff;
+box-shadow: 0 0 3px 0 $secondary;
+}
+
+
+.home-header{
+    position: relative;
+    top: 0vh;
+    left: 0;
+    background-image: url('slike/homeprofil.jpg');
+    min-height: 60vh;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: top;
+  background-size: cover;
+}
+
+h1{
+    color:'primary';
+}
+    
+.text-primary{
+    font-size:1.2rem;
+    color: #1f95aa;    
+}
+.navbar-nav{
+    justify-content: space-around;
+    width:40%;
+}
+
+.home-naslov, .service-naslov{
+    padding: 35px 0;
+    text-align:center;
+    color:'primary'; 
+}
+.bg-primaro{
+   
+    background-color:'primary';
+}
+.card{
+    text-transform: uppercase;
+}
+.feature{
+    transition:all 0.4s ease-out 0s;
+    &:hover{
+        transform: scale(1.01);
+
+    }
+}
+.our-service{
+  background:linear-gradient(#d6d3d3,white,white,#e6e4e4);
+    padding: 20px 0;
+   
+}
+
+
+.bg-image1{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+
+.bg-image1:hover{
+    opacity: 0;
+}
+
+}
+.bg-image2{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+  opacity: 1;
+transition: all 0.4s ease-out 0s;
+  &:hover{
+      opacity: 0;
+  }
+
+}
+
+@mixin serviceCardProp {
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 20vh;
+    &::after{
+        content: '';
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background: rgba(101, 9, 167, 0.055);
+        opacity: 1;
+        top: 0;
+        left: 0;
+    }
+    &:hover::after{
+        background: rgba(17, 17, 17, 0.719);
+    }
+    & :nth-child(2){
+        z-index: 3;
+       display: none;
+    } 
+    h3{
+        display: none;
+        border:1px solid 'primary';
+        z-index: 3;
+    }
+    &:hover h3{
+        display: block;
+    }
+    
+    &:hover :nth-child(2){
+      display: block;
+    } 
+}
+
+
+
+.bg-design{background:url('slike/design.jpg');
+  @include serviceCardProp();
+}
+.bg-material{background:url('slike/materials.jpg');
+    @include serviceCardProp();
+  }
+  .bg-sample{background:url('slike/sample.jpg');
+    @include serviceCardProp();
+  }
+  .bg-zip{background:url('slike/zip.jpg');
+    @include serviceCardProp();
+  }
+
+
+  .product-list{
+      position: relative;
+      top: 10vh;
+      padding: 35px 0;
+  }
+  .btn-link{
+      position: fixed;
+      bottom: 0;
+     right: 2px;
+    z-index: 3;
+
+  }
+
+  .item-profil{
+      width: 100%;
+      position: relative;
+      top: 10vh;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      align-content: center;
+      justify-content: space-between;
+      justify-content: center;
+  }
+  .btn-submit{
+      height: 5em;
+  }
+  .btn-container{
+      display: flex;
+      width:100%;
+      justify-content: space-around;
+      justify-items: center;
+      flex-wrap: wrap;
+      border-bottom: 1px solid $secondary;
+     
+      
+  }

@@ -1,0 +1,24 @@
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+$theme-colors:(
+'danger': #e9ec31,
+'primary':#4bb6c9,
+'info':tomato,
+'secondary':#213b8f,
+'warning': #e4c9cd,
+'grey':#fcf6f6,
+'dgrey':#9c9595,
+);
+@import "node_modules/bootstrap/scss/bootstrap";
