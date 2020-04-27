@@ -8,7 +8,7 @@ import Image from 'react-bootstrap/Image';
 import Col from 'react-bootstrap/Col'
 import Container from 'react-bootstrap/Container'
 
-import MyButton from '../components/MyButton'
+
 
 export default function Item() {
     const value= useContext(StoreContext);
@@ -41,14 +41,14 @@ Item.size=size
 
         <Col>
         <button type="button" style={{width:'4em'}} className="btn btn-info btn-link "  onClick={()=>location.goBack()} >Back</button>
-            <select   value={size} onChange={(event) =>(setsize(event.target.value))}>
+            <select style={{width:'4em'}}  className="mdb-select md-form bg-info text-primary border-0 m-1 rounded-pill p-1  " value={size} onChange={(event) =>(setsize(event.target.value))}>
               
                 <option value='S'>S</option>
         <option value='M'>M</option>
                 <option value='L'>L</option>
             </select>
-            <button type="button" style={{width:'4em'}} className="btn btn-primary  m-2" onClick={addtoCart.bind(this, Item)} >Add</button>
-            <Link to={`/cart`}><MyButton  gumbtekst={'Chart'} variant={'primary'}/></Link> 
+            <button type="button" style={{width:'4em'}} className="btn btn-primary m-1" onClick={addtoCart.bind(this, Item)} >Add</button>
+            <Link to={`/cart`}><button type="button" style={{width:'4em'}} className="btn btn-primary m-1 ">Cart</button></Link> 
         </Col>
 
     </Row>
