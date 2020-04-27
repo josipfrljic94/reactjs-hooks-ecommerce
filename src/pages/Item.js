@@ -32,7 +32,7 @@ Item.size=size
     return(
         <Container className='  item-profil'>
 
-<Row xl={12} lg={12} md={12} sd={12} className='btn-container '>
+<Row xl={12} lg={12} md={12} sd={12} className='btn-container shadow '>
   
   <Col >
   <h1 className='text-primary'>{Item.title}</h1> 
@@ -41,7 +41,7 @@ Item.size=size
 
         <Col>
         <button type="button" style={{width:'4em'}} className="btn btn-info btn-link "  onClick={()=>location.goBack()} >Back</button>
-            <select style={{width:'4em'}}  className="mdb-select md-form bg-info text-primary border-0 m-1 rounded-pill p-1  " value={size} onChange={(event) =>(setsize(event.target.value))}>
+            <select style={{width:'4em'}}  className="mdb-select md-form bg-primary  border-0 m-1 rounded p-1 " value={size} onChange={(event) =>(setsize(event.target.value))}>
               
                 <option value='S'>S</option>
         <option value='M'>M</option>
