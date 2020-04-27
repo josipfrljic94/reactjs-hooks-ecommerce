@@ -40,15 +40,15 @@ Item.size=size
   </Col>
 
         <Col>
-        <button type="button" style={{height:'3em'}} className="btn btn-info btn-link "  onClick={()=>location.goBack()} >Back</button>
-            <select type="button" style={{height:'3em'}} className="btn btn-primary  m-2" value={size} onChange={(event) =>(setsize(event.target.value))}>
+        <button type="button" style={{width:'4em'}} className="btn btn-info btn-link "  onClick={()=>location.goBack()} >Back</button>
+            <select   value={size} onChange={(event) =>(setsize(event.target.value))}>
               
                 <option value='S'>S</option>
         <option value='M'>M</option>
                 <option value='L'>L</option>
             </select>
-            <button type="button" style={{height:'3em'}} className="btn btn-primary  m-2" onClick={addtoCart.bind(this, Item)} >Add</button>
-            <Link to={`/cart`}><MyButton  gumbtekst={'Check chart'} variant={'primary'}/></Link> 
+            <button type="button" style={{width:'4em'}} className="btn btn-primary  m-2" onClick={addtoCart.bind(this, Item)} >Add</button>
+            <Link to={`/cart`}><MyButton  gumbtekst={'Chart'} variant={'primary'}/></Link> 
         </Col>
 
     </Row>
@@ -72,8 +72,4 @@ Item.size=size
 }
 
 
-  {/* <h1>{Item.title}</h1> 
-        <h4>{Item.type[0]}</h4>  */}
-    {/* <h5>{Item.price}</h5> */}
-     {/* <img src={Item.img[0]} alt={Item.name}width='300px'></img>
-    <img src={Item.img[1]} alt={Item.name}width='300px'></img> */}
+  
