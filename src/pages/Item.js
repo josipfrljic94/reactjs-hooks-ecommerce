@@ -48,7 +48,7 @@ Item.size=size
                 <option value='L'>L</option>
             </select>
             <button type="button" style={{width:'4em'}} className="btn btn-primary m-1" onClick={addtoCart.bind(this, Item)} >Add</button>
-            <Link to={`/cart`}><button type="button" style={{width:'4em'}} className="btn btn-primary m-1 ">Go Cart</button></Link> 
+            <Link to={`/cart`}><button type="button" style={{width:'4em'}} className="btn btn-primary m-1 ">Check</button></Link> 
         </Col>
 
     </Row>
